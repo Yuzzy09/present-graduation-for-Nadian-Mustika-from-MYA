@@ -1,0 +1,76 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1.2s ease forwards;
+}
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+main {
+  -webkit-overflow-scrolling: touch;
+}
+
+@keyframes float1 {
+  0% { transform: translateY(0) translateX(0); opacity: 0.6; }
+  50% { transform: translateY(-40px) translateX(20px); opacity: 1; }
+  100% { transform: translateY(0) translateX(0); opacity: 0.6; }
+}
+
+@keyframes float2 {
+  0% { transform: translateY(0) translateX(0); opacity: 0.5; }
+  50% { transform: translateY(-30px) translateX(-15px); opacity: 1; }
+  100% { transform: translateY(0) translateX(0); opacity: 0.5; }
+}
+
+@keyframes float3 {
+  0% { transform: translateY(0) translateX(0); opacity: 0.4; }
+  50% { transform: translateY(-50px) translateX(10px); opacity: 1; }
+  100% { transform: translateY(0) translateX(0); opacity: 0.4; }
+}
+
+.animate-float1 {
+  animation: float1 6s ease-in-out infinite;
+  top: 20%;
+  left: 10%;
+}
+
+.animate-float2 {
+  animation: float2 7s ease-in-out infinite;
+  top: 60%;
+  right: 15%;
+}
+
+.animate-float3 {
+  animation: float3 8s ease-in-out infinite;
+  bottom: 20%;
+  left: 20%;
+}
